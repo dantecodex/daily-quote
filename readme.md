@@ -114,8 +114,7 @@ npm start
 ![Screenshot 3](/extras/screenshot3.png)
 ![Screenshot 4](/extras/screenshot4.png)
 ![Screenshot 5](/extras/screenshot5.png)
-![Screenshot 6](/extras/screenshot6.png)
-![Screenshot 7](/extras/screenshot7.png)
+![Screenshot 6](/extras/screenshot7.png)
 
 ## Contributing
 
