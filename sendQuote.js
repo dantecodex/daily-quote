@@ -15,8 +15,8 @@ const loadEmailData = async () => {
         let cronExpression = timeToCronExpression(time)
         cron.schedule(cronExpression, async () => {
             const randomQuote = await Quote.aggregate([{ $sample: { size: 1 } }])
-            const { quote, quoteAuthor } = randomQuote[0]
-            const message = `${quote}\nBy ${quoteAuthor}`
+            let { quote, quoteAuthor } = randomQuote[0]
+            const message = `${quote}\nBy ${quoteAuthor || "Author not found"}`
             try {
                 await sendEmail({
                     email,
