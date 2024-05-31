@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/login.css">
+  <title>Sign In</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-container">
+      <div class="text-center">
+        <h2 class="title">Welcome back!</h2>
+        <p class="subtitle">Sign in to your account to continue.</p>
+      </div>
+      <form class="form" action="/api/user/login" method="POST">
+        <div class="input-group">
+          <label for="email" class="label">Email address</label>
+          <div class="input-wrapper">
+            <input id="email" autocomplete="email" required type="email" name="email" placeholder="Enter your email"
+              class="input">
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="password" class="label">Password</label>
+          <div class="input-wrapper">
+            <input id="password" autocomplete="current-password" required type="password" name="password"
+              placeholder="Enter your password" class="input">
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="submit-button">Sign in</button>
+        </div>
+      </form>
+      <div class="register-text">
+        Don't have an account? <a class="register-link" href="/signup">Register</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

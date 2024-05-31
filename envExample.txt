@@ -1,0 +1,12 @@
+ENVI = prod
+PORT = 4200
+# CONN_STR = mongodb://localhost:27017
+
+JWT_SECRET = 
+LOGIN_EXPIRES = 
+
+EMAIL_HOST = 
+EMAIL_PORT = 
+EMAIL_USER = 
+EMAIL_PASS = 
+
