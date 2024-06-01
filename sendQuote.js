@@ -6,7 +6,7 @@ import sendEmail from "./utils/email.js";
 
 
 const loadEmailData = async () => {
-    const allUsers = await User.find({ quote: true })
+    const allUsers = await User.find({ quote: true }, { time: 1, email: 1 })
     if (!allUsers) {
         return console.error('Cannot get users from DB');
     }
