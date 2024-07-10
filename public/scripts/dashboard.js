@@ -5,16 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const profileMenu = document.getElementById("profile-menu");
     const formEle = document.getElementById("user-setting");
 
-
-    // dailyQuoteSwitch.addEventListener("click", () => {
-    //     const isChecked = dailyQuoteSwitch.getAttribute("aria-checked") === "true";
-    //     console.log(isChecked);
-
-    //     dailyQuoteSwitch.setAttribute("aria-checked", !isChecked);
-    //     dailyQuoteSwitch.querySelector(".switch-thumb").style.transform = isChecked ? "translateX(0)" : "translateX(20px)";
-    //     dailyQuoteSwitch.style.backgroundColor = isChecked ? "#e2e8f0" : "#18181b";
-    // });
-
     // Initialize Flatpickr for time selection
     const fp = flatpickr(timePicker, {
         enableTime: true,
@@ -40,30 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // formEle.onsubmit = async (event) => {
-    //     event.preventDefault(); // Prevent the default form submission behavior
-
-    //     let formData = new FormData(formEle);
-    //     if (!formData.has("quote")) {
-    //         formData.append("quote", false)
-    //     }
-
-    //     for (let pair of formData.entries()) {
-    //         if (pair.includes("time")) {
-    //             if (pair[1] == '') {
-    //                 formData.set("time", "6:00: AM")
-    //             }
-    //         }
-    //     }
-
-    //     fetch('/api/user/settings', {
-    //         method: "POST",
-    //         body: new URLSearchParams(formData)
-    //     }).then(response => response.json())
-    //         .then(data => console.log("Success", data))
-    //         .catch(err => console.error("Error", err))
-    // };
-
     formEle.onsubmit = async (event) => {
         event.preventDefault(); // Prevent the default form submission behavior
 
@@ -76,10 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!formData.has("time") || formData.get("time") === '') {
             formData.set("time", "6:00 AM");
         }
-
-        // for (let pair of formData.entries()) {
-        //     console.log(pair[0] + ':' + pair[1]);
-        // }
 
 
         fetch('/api/user/settings', {
